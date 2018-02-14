@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+    <table border="1">
+    {% for item in items %}
+        <tr>
+            <td>{{ item.prdl_Description }}</td>
+            <td>{{ item.ori_Quantity }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+{% endblock %}

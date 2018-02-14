@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+    <table border="1">
+    {% for item in items %}
+        <tr>
+            <td><a href="/order/{{ item.ord_ID }}">{{ item.ord_Code }}</a></td>
+            <td>{{ item.ord_CustomerOrderCode }}</td>
+            <td>{{ item.ord_InputDate }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+{% endblock %}
