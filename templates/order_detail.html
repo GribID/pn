@@ -7,5 +7,9 @@
             <td>{{ item.ori_Quantity }}</td>
         </tr>
     {% endfor %}
+        <tr bgcolor="#ffe4c4">
+            <td>Итого</td>
+            <td>{{ items | sum(attribute='ori_Quantity') }}</td>
+        </tr>
     </table>
 {% endblock %}

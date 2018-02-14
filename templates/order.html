@@ -6,6 +6,11 @@
             <td><a href="/order/{{ item.ord_ID }}">{{ item.ord_Code }}</a></td>
             <td>{{ item.ord_CustomerOrderCode }}</td>
             <td>{{ item.ord_InputDate }}</td>
+                {% if item.ord_StatusID == 1 %} <td bgcolor="aqua">В ожидании</td>
+                {% elif  item.ord_StatusID == 2 %} <td bgcolor="#7fff00">В работе</td>
+                {% elif  item.ord_StatusID == 3 %} <td bgcolor="#faebd7">Выполнен</td>
+                {% endif %}
+
         </tr>
     {% endfor %}
     </table>

@@ -23,7 +23,8 @@ def order():
 
 @app.route('/order/<ord_code>')
 def order_detail(ord_code):
-    cursor.execute('SELECT * '
+    cursor.execute(
+                   'SELECT * '
                    'FROM LV_OrderItem INNER JOIN '
                    'LV_ProductLang ON LV_OrderItem.ori_ProductID = LV_ProductLang.prdl_ProductID '
                         'AND LV_ProductLang.prdl_LanguageID = 4 '
