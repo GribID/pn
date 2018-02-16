@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+    <form method="post" action="/task/">
+    <select name= depositor>
+    {% for item in items %}
+    <option value= "{{item.dep_ID}}">{{item.dep_Code}}</option>"
+    {% endfor %}
+    </select><br>
+    <input type="date" name="mindate"><br>
+    <input type="submit" value="GO">
+    </form>
+{% endblock %}
